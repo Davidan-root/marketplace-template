@@ -1,0 +1,67 @@
+# Dependencias y Paquetes (Evita subir node_modules; regenera con pnpm install)
+node_modules/
+pnpm-lock.yaml  # Commitéalo si quieres lockfile consistente; ignóralo si usas CI para generar
+
+# Builds y Outputs Generados (No subas artifacts compilados; build en CI/CD)
+dist/           # Para NestJS builds
+build/          # Builds generales
+.next/          # Cache y builds de Next.js (SSR/SSG)
+out/            # Exports estáticos de Next.js
+
+# Entornos y Secrets (Protege claves DB, API keys; usa .env.example para templates)
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+*.env.*         # Cualquier variante
+
+# Logs y Debugging (Ignora archivos temporales para limpieza)
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+nest-cli.json   # Config temporal de NestJS
+
+# Testing y Coverage (Generados en runs; no en repo)
+coverage/
+*.lcov
+.nyc_output/
+
+# Prisma y DB Local (Ignora migraciones locales y DB dev; usa Prisma Migrate en prod)
+prisma/migrations/  # Genera en deploy; no commit si usas Prisma Studio
+prisma/dev.db       # DB SQLite local si pruebas sin Postgres
+prisma/*.sqlite     # Cualquier DB local
+prisma/*.sqlite-journal
+
+# Docker y Containerización (Ignora configs locales; commit dockerfile si reusable)
+*.dockerignore      # Si es temp
+docker-compose.override.yml  # Overrides locales
+/volumes/           # Datos persistentes de Docker (e.g., postgres-data)
+
+# Turborepo y Monorepo Temps (Cache para builds rápidos)
+.turbo/             # Cache de Turborepo; regenera localmente
+
+# OS-Specific y Editores (Limpia ruido cross-plataforma)
+.DS_Store           # macOS
+Thumbs.db           # Windows
+ehthumbs.db
+Desktop.ini
+*.swp               # Vim swaps
+.vscode/            # Settings locales de VS Code (commit .vscode/extensions.json si team-shared)
+.idea/              # JetBrains IDE
+
+# Otros Comunes para Nuestro Stack
+*.pem               # Certs SSL locales
+tmp/                # Temps generales
+temp/
+cache/
+*.cache
+# Si agregas Redis: redis.conf, dump.rdb
+# Si agregas Stripe: stripe-keys.json (custom si usas)
+
+# Ignora archivos grandes no esenciales (e.g., para performance)
+*.zip
+*.tar.gz
+*.rar
