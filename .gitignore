@@ -65,3 +65,4 @@ cache/
 *.zip
 *.tar.gz
 *.rar
+/generated/prisma
