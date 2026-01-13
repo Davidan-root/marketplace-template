@@ -14,92 +14,167 @@ datasource db {
   
 }
 
-model User {
-  id        Int      @id @default(autoincrement())
-  email     String   @unique
-  name      String?
-  password  String?  // Hashed, usa bcrypt
-  role      Role     @default(USER)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  deleted   Boolean  @default(false)
+model Usuario {
+  id                BigInt        @id @default(autoincrement())
+  direccionUsuario  String
+  email             String        @unique
+  nombreUsuario     String
+  numeroContacto    String
+  passwordHash      String
+  estadoUsuarioId   BigInt
+  estadoUsuario     EstadoUsuario @relation(fields: [estadoUsuarioId], references: [id])
+  vendedor          Vendedor?
+  carritos          Carrito[]
+  pedidos           Pedido[]
 
-  products  Product[] // Vendedor tiene muchos productos
-  orders    Order[]   // Comprador tiene órdenes
+  @@map("usuario")
 }
 
-model Product {
-  id          Int      @id @default(autoincrement())
-  title       String
-  description String?
-  price       Decimal  @db.Decimal(10,2)
-  stock       Int      @default(0)
-  category    Category
-  imageUrl    String?  // URL de Cloudinary/S3
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  deleted     Boolean  @default(false)
+model EstadoUsuario {
+  id            BigInt    @id @default(autoincrement())
+  descripcionEU String
+  nombreEU      String
+  usuarios      Usuario[]
 
-  sellerId    Int
-  seller      User     @relation(fields: [sellerId], references: [id], onDelete: Cascade)
-
-  orderItems  OrderItem[]
-
-  @@unique([title, sellerId])
-  @@index([category])
-  @@index([sellerId])
+  @@map("estado_usuario")
 }
 
-model Order {
-  id        Int      @id @default(autoincrement())
-  total     Decimal  @db.Decimal(10,2)
-  status    OrderStatus @default(PENDING)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  deleted   Boolean  @default(false)
+model Vendedor {
+  id               BigInt         @id @default(autoincrement())
+  nombreTienda     String
+  reputacion       Float         @default(0)
+  usuarioId        BigInt         @unique
+  usuario          Usuario        @relation(fields: [usuarioId], references: [id])
+  estadoVendedorId BigInt
+  estadoVendedor   EstadoVendedor @relation(fields: [estadoVendedorId], references: [id])
+  publicaciones     Publicacion[]
 
-  buyerId   Int
-  buyer     User     @relation(fields: [buyerId], references: [id], onDelete: Cascade)
-
-  items     OrderItem[]
-
-  @@index([status])
-  @@index([buyerId, status])
+  @@map("vendedor")
 }
 
-model OrderItem {
-  id               Int      @id @default(autoincrement())
-  quantity         Int      @default(1)
-  priceAtPurchase  Decimal  @db.Decimal(10,2) // snapshot del precio al comprar
+model EstadoVendedor {
+  id            BigInt    @id @default(autoincrement())
+  descripcionEV String
+  nombreEV      String
+  vendedores    Vendedor[]
 
-  productId Int
-  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
-
-  orderId   Int
-  order     Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
-
-  @@unique([orderId, productId])
-  @@index([productId])
+  @@map("estado_vendedor")
 }
 
-enum Role {
-  USER
-  SELLER
-  ADMIN
+model Publicacion {
+  id               BigInt       @id @default(autoincrement())
+  condicionesVenta String
+  enviosVenta      Boolean
+  precioVenta      Float
+  stockVenta       Int
+  vendedorId       BigInt
+  vendedor         Vendedor     @relation(fields: [vendedorId], references: [id])
+  productoId       BigInt
+  producto         Producto     @relation(fields: [productoId], references: [id])
+  carritoItems     CarritoItem[]
+  pedidoItems      PedidoItem[]
+
+  @@map("publicacion")
 }
 
-enum Category {
-  ELECTRONICS
-  CLOTHING
-  BOOKS
-  HOME
-  OTHER
+model Producto {
+  id                  BigInt      @id @default(autoincrement())
+  descripcionProducto String
+  nombreProducto      String
+  categoriaId         BigInt
+  categoria           Categoria   @relation(fields: [categoriaId], references: [id])
+  publicaciones       Publicacion[]
+  resenas             Resena[]
+
+  @@map("producto")
 }
 
-enum OrderStatus {
-  PENDING
-  PAID
-  SHIPPED
-  DELIVERED
-  CANCELLED
+model Categoria {
+  id                   BigInt    @id @default(autoincrement())
+  descripcionCategoria String
+  nombreCategoria      String
+  productos            Producto[]
+
+  @@map("categoria")
+}
+
+model Carrito {
+  id                    BigInt      @id @default(autoincrement())
+  fechaHoraAlta         DateTime     @default(now())
+  fechaHoraBaja         DateTime?
+  fechaHoraModificacion DateTime?
+  usuarioId             BigInt
+  usuario               Usuario     @relation(fields: [usuarioId], references: [id])
+  carritoItems          CarritoItem[]
+
+  @@map("carrito")
+}
+
+model CarritoItem {
+  id            BigInt      @id @default(autoincrement())
+  cantidadCI    Int
+  carritoId     BigInt
+  carrito       Carrito     @relation(fields: [carritoId], references: [id])
+  publicacionId BigInt
+  publicacion   Publicacion @relation(fields: [publicacionId], references: [id])
+
+  @@map("carrito_item")
+}
+
+model Pedido {
+  id            BigInt     @id @default(autoincrement())
+  fechaHoraAlta DateTime   @default(now())
+  numeroPedido  Int        @unique
+  totalPrecio   Float
+  usuarioId     BigInt
+  usuario       Usuario    @relation(fields: [usuarioId], references: [id])
+  pedidoItems   PedidoItem[]
+  pagos         Pago[]
+  envio         Envio?
+
+  @@map("pedido")
+}
+
+model PedidoItem {
+  id             BigInt      @id @default(autoincrement())
+  cantidadPI     Int
+  precioUnitario Float
+  subtotalPI     Float
+  pedidoId       BigInt
+  pedido         Pedido      @relation(fields: [pedidoId], references: [id])
+  publicacionId  BigInt
+  publicacion    Publicacion @relation(fields: [publicacionId], references: [id])
+
+  @@map("pedido_item")
+}
+
+model Pago {
+  id         BigInt @id @default(autoincrement())
+  metodoPago String
+  monto      Float
+  pedidoId   BigInt
+  pedido     Pedido @relation(fields: [pedidoId], references: [id])
+
+  @@map("pago")
+}
+
+model Envio {
+  id          BigInt @id @default(autoincrement())
+  estadoEnvio String
+  numeroEnvio Int
+  pedidoId    BigInt @unique
+  pedido      Pedido @relation(fields: [pedidoId], references: [id])
+
+  @@map("envio")
+}
+
+model Resena {
+  id            BigInt   @id @default(autoincrement())
+  comentario    String
+  fechaHoraAlta DateTime @default(now())
+  puntaje       Int
+  productoId    BigInt
+  producto      Producto @relation(fields: [productoId], references: [id])
+
+  @@map("resena")
 }
