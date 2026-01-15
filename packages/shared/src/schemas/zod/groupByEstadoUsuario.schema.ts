@@ -1,0 +1,15 @@
+import type { Prisma } from '@prisma/client';
+import * as z from 'zod';
+import { EstadoUsuarioWhereInputObjectSchema as EstadoUsuarioWhereInputObjectSchema } from './objects/EstadoUsuarioWhereInput.schema';
+import { EstadoUsuarioOrderByWithAggregationInputObjectSchema as EstadoUsuarioOrderByWithAggregationInputObjectSchema } from './objects/EstadoUsuarioOrderByWithAggregationInput.schema';
+import { EstadoUsuarioScalarWhereWithAggregatesInputObjectSchema as EstadoUsuarioScalarWhereWithAggregatesInputObjectSchema } from './objects/EstadoUsuarioScalarWhereWithAggregatesInput.schema';
+import { EstadoUsuarioScalarFieldEnumSchema } from './enums/EstadoUsuarioScalarFieldEnum.schema';
+import { EstadoUsuarioCountAggregateInputObjectSchema as EstadoUsuarioCountAggregateInputObjectSchema } from './objects/EstadoUsuarioCountAggregateInput.schema';
+import { EstadoUsuarioMinAggregateInputObjectSchema as EstadoUsuarioMinAggregateInputObjectSchema } from './objects/EstadoUsuarioMinAggregateInput.schema';
+import { EstadoUsuarioMaxAggregateInputObjectSchema as EstadoUsuarioMaxAggregateInputObjectSchema } from './objects/EstadoUsuarioMaxAggregateInput.schema';
+import { EstadoUsuarioAvgAggregateInputObjectSchema as EstadoUsuarioAvgAggregateInputObjectSchema } from './objects/EstadoUsuarioAvgAggregateInput.schema';
+import { EstadoUsuarioSumAggregateInputObjectSchema as EstadoUsuarioSumAggregateInputObjectSchema } from './objects/EstadoUsuarioSumAggregateInput.schema';
+
+export const EstadoUsuarioGroupBySchema: z.ZodType<Prisma.EstadoUsuarioGroupByArgs> = z.object({ where: EstadoUsuarioWhereInputObjectSchema.optional(), orderBy: z.union([EstadoUsuarioOrderByWithAggregationInputObjectSchema, EstadoUsuarioOrderByWithAggregationInputObjectSchema.array()]).optional(), having: EstadoUsuarioScalarWhereWithAggregatesInputObjectSchema.optional(), take: z.number().optional(), skip: z.number().optional(), by: z.array(EstadoUsuarioScalarFieldEnumSchema), _count: z.union([ z.literal(true), EstadoUsuarioCountAggregateInputObjectSchema ]).optional(), _min: EstadoUsuarioMinAggregateInputObjectSchema.optional(), _max: EstadoUsuarioMaxAggregateInputObjectSchema.optional(), _avg: EstadoUsuarioAvgAggregateInputObjectSchema.optional(), _sum: EstadoUsuarioSumAggregateInputObjectSchema.optional() }).strict() as unknown as z.ZodType<Prisma.EstadoUsuarioGroupByArgs>;
+
+export const EstadoUsuarioGroupByZodSchema = z.object({ where: EstadoUsuarioWhereInputObjectSchema.optional(), orderBy: z.union([EstadoUsuarioOrderByWithAggregationInputObjectSchema, EstadoUsuarioOrderByWithAggregationInputObjectSchema.array()]).optional(), having: EstadoUsuarioScalarWhereWithAggregatesInputObjectSchema.optional(), take: z.number().optional(), skip: z.number().optional(), by: z.array(EstadoUsuarioScalarFieldEnumSchema), _count: z.union([ z.literal(true), EstadoUsuarioCountAggregateInputObjectSchema ]).optional(), _min: EstadoUsuarioMinAggregateInputObjectSchema.optional(), _max: EstadoUsuarioMaxAggregateInputObjectSchema.optional(), _avg: EstadoUsuarioAvgAggregateInputObjectSchema.optional(), _sum: EstadoUsuarioSumAggregateInputObjectSchema.optional() }).strict();

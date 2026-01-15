@@ -1,0 +1,14 @@
+import type { Prisma } from '@prisma/client';
+import * as z from 'zod';
+import { CategoriaOrderByWithRelationInputObjectSchema as CategoriaOrderByWithRelationInputObjectSchema } from './objects/CategoriaOrderByWithRelationInput.schema';
+import { CategoriaWhereInputObjectSchema as CategoriaWhereInputObjectSchema } from './objects/CategoriaWhereInput.schema';
+import { CategoriaWhereUniqueInputObjectSchema as CategoriaWhereUniqueInputObjectSchema } from './objects/CategoriaWhereUniqueInput.schema';
+import { CategoriaCountAggregateInputObjectSchema as CategoriaCountAggregateInputObjectSchema } from './objects/CategoriaCountAggregateInput.schema';
+import { CategoriaMinAggregateInputObjectSchema as CategoriaMinAggregateInputObjectSchema } from './objects/CategoriaMinAggregateInput.schema';
+import { CategoriaMaxAggregateInputObjectSchema as CategoriaMaxAggregateInputObjectSchema } from './objects/CategoriaMaxAggregateInput.schema';
+import { CategoriaAvgAggregateInputObjectSchema as CategoriaAvgAggregateInputObjectSchema } from './objects/CategoriaAvgAggregateInput.schema';
+import { CategoriaSumAggregateInputObjectSchema as CategoriaSumAggregateInputObjectSchema } from './objects/CategoriaSumAggregateInput.schema';
+
+export const CategoriaAggregateSchema: z.ZodType<Prisma.CategoriaAggregateArgs> = z.object({ orderBy: z.union([CategoriaOrderByWithRelationInputObjectSchema, CategoriaOrderByWithRelationInputObjectSchema.array()]).optional(), where: CategoriaWhereInputObjectSchema.optional(), cursor: CategoriaWhereUniqueInputObjectSchema.optional(), take: z.number().optional(), skip: z.number().optional(), _count: z.union([ z.literal(true), CategoriaCountAggregateInputObjectSchema ]).optional(), _min: CategoriaMinAggregateInputObjectSchema.optional(), _max: CategoriaMaxAggregateInputObjectSchema.optional(), _avg: CategoriaAvgAggregateInputObjectSchema.optional(), _sum: CategoriaSumAggregateInputObjectSchema.optional() }).strict() as unknown as z.ZodType<Prisma.CategoriaAggregateArgs>;
+
+export const CategoriaAggregateZodSchema = z.object({ orderBy: z.union([CategoriaOrderByWithRelationInputObjectSchema, CategoriaOrderByWithRelationInputObjectSchema.array()]).optional(), where: CategoriaWhereInputObjectSchema.optional(), cursor: CategoriaWhereUniqueInputObjectSchema.optional(), take: z.number().optional(), skip: z.number().optional(), _count: z.union([ z.literal(true), CategoriaCountAggregateInputObjectSchema ]).optional(), _min: CategoriaMinAggregateInputObjectSchema.optional(), _max: CategoriaMaxAggregateInputObjectSchema.optional(), _avg: CategoriaAvgAggregateInputObjectSchema.optional(), _sum: CategoriaSumAggregateInputObjectSchema.optional() }).strict();

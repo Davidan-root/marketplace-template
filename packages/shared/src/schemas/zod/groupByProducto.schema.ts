@@ -1,0 +1,15 @@
+import type { Prisma } from '@prisma/client';
+import * as z from 'zod';
+import { ProductoWhereInputObjectSchema as ProductoWhereInputObjectSchema } from './objects/ProductoWhereInput.schema';
+import { ProductoOrderByWithAggregationInputObjectSchema as ProductoOrderByWithAggregationInputObjectSchema } from './objects/ProductoOrderByWithAggregationInput.schema';
+import { ProductoScalarWhereWithAggregatesInputObjectSchema as ProductoScalarWhereWithAggregatesInputObjectSchema } from './objects/ProductoScalarWhereWithAggregatesInput.schema';
+import { ProductoScalarFieldEnumSchema } from './enums/ProductoScalarFieldEnum.schema';
+import { ProductoCountAggregateInputObjectSchema as ProductoCountAggregateInputObjectSchema } from './objects/ProductoCountAggregateInput.schema';
+import { ProductoMinAggregateInputObjectSchema as ProductoMinAggregateInputObjectSchema } from './objects/ProductoMinAggregateInput.schema';
+import { ProductoMaxAggregateInputObjectSchema as ProductoMaxAggregateInputObjectSchema } from './objects/ProductoMaxAggregateInput.schema';
+import { ProductoAvgAggregateInputObjectSchema as ProductoAvgAggregateInputObjectSchema } from './objects/ProductoAvgAggregateInput.schema';
+import { ProductoSumAggregateInputObjectSchema as ProductoSumAggregateInputObjectSchema } from './objects/ProductoSumAggregateInput.schema';
+
+export const ProductoGroupBySchema: z.ZodType<Prisma.ProductoGroupByArgs> = z.object({ where: ProductoWhereInputObjectSchema.optional(), orderBy: z.union([ProductoOrderByWithAggregationInputObjectSchema, ProductoOrderByWithAggregationInputObjectSchema.array()]).optional(), having: ProductoScalarWhereWithAggregatesInputObjectSchema.optional(), take: z.number().optional(), skip: z.number().optional(), by: z.array(ProductoScalarFieldEnumSchema), _count: z.union([ z.literal(true), ProductoCountAggregateInputObjectSchema ]).optional(), _min: ProductoMinAggregateInputObjectSchema.optional(), _max: ProductoMaxAggregateInputObjectSchema.optional(), _avg: ProductoAvgAggregateInputObjectSchema.optional(), _sum: ProductoSumAggregateInputObjectSchema.optional() }).strict() as unknown as z.ZodType<Prisma.ProductoGroupByArgs>;
+
+export const ProductoGroupByZodSchema = z.object({ where: ProductoWhereInputObjectSchema.optional(), orderBy: z.union([ProductoOrderByWithAggregationInputObjectSchema, ProductoOrderByWithAggregationInputObjectSchema.array()]).optional(), having: ProductoScalarWhereWithAggregatesInputObjectSchema.optional(), take: z.number().optional(), skip: z.number().optional(), by: z.array(ProductoScalarFieldEnumSchema), _count: z.union([ z.literal(true), ProductoCountAggregateInputObjectSchema ]).optional(), _min: ProductoMinAggregateInputObjectSchema.optional(), _max: ProductoMaxAggregateInputObjectSchema.optional(), _avg: ProductoAvgAggregateInputObjectSchema.optional(), _sum: ProductoSumAggregateInputObjectSchema.optional() }).strict();

@@ -1,0 +1,15 @@
+import type { Prisma } from '@prisma/client';
+import * as z from 'zod';
+import { ResenaWhereInputObjectSchema as ResenaWhereInputObjectSchema } from './objects/ResenaWhereInput.schema';
+import { ResenaOrderByWithAggregationInputObjectSchema as ResenaOrderByWithAggregationInputObjectSchema } from './objects/ResenaOrderByWithAggregationInput.schema';
+import { ResenaScalarWhereWithAggregatesInputObjectSchema as ResenaScalarWhereWithAggregatesInputObjectSchema } from './objects/ResenaScalarWhereWithAggregatesInput.schema';
+import { ResenaScalarFieldEnumSchema } from './enums/ResenaScalarFieldEnum.schema';
+import { ResenaCountAggregateInputObjectSchema as ResenaCountAggregateInputObjectSchema } from './objects/ResenaCountAggregateInput.schema';
+import { ResenaMinAggregateInputObjectSchema as ResenaMinAggregateInputObjectSchema } from './objects/ResenaMinAggregateInput.schema';
+import { ResenaMaxAggregateInputObjectSchema as ResenaMaxAggregateInputObjectSchema } from './objects/ResenaMaxAggregateInput.schema';
+import { ResenaAvgAggregateInputObjectSchema as ResenaAvgAggregateInputObjectSchema } from './objects/ResenaAvgAggregateInput.schema';
+import { ResenaSumAggregateInputObjectSchema as ResenaSumAggregateInputObjectSchema } from './objects/ResenaSumAggregateInput.schema';
+
+export const ResenaGroupBySchema: z.ZodType<Prisma.ResenaGroupByArgs> = z.object({ where: ResenaWhereInputObjectSchema.optional(), orderBy: z.union([ResenaOrderByWithAggregationInputObjectSchema, ResenaOrderByWithAggregationInputObjectSchema.array()]).optional(), having: ResenaScalarWhereWithAggregatesInputObjectSchema.optional(), take: z.number().optional(), skip: z.number().optional(), by: z.array(ResenaScalarFieldEnumSchema), _count: z.union([ z.literal(true), ResenaCountAggregateInputObjectSchema ]).optional(), _min: ResenaMinAggregateInputObjectSchema.optional(), _max: ResenaMaxAggregateInputObjectSchema.optional(), _avg: ResenaAvgAggregateInputObjectSchema.optional(), _sum: ResenaSumAggregateInputObjectSchema.optional() }).strict() as unknown as z.ZodType<Prisma.ResenaGroupByArgs>;
+
+export const ResenaGroupByZodSchema = z.object({ where: ResenaWhereInputObjectSchema.optional(), orderBy: z.union([ResenaOrderByWithAggregationInputObjectSchema, ResenaOrderByWithAggregationInputObjectSchema.array()]).optional(), having: ResenaScalarWhereWithAggregatesInputObjectSchema.optional(), take: z.number().optional(), skip: z.number().optional(), by: z.array(ResenaScalarFieldEnumSchema), _count: z.union([ z.literal(true), ResenaCountAggregateInputObjectSchema ]).optional(), _min: ResenaMinAggregateInputObjectSchema.optional(), _max: ResenaMaxAggregateInputObjectSchema.optional(), _avg: ResenaAvgAggregateInputObjectSchema.optional(), _sum: ResenaSumAggregateInputObjectSchema.optional() }).strict();

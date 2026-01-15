@@ -1,0 +1,15 @@
+import type { Prisma } from '@prisma/client';
+import * as z from 'zod';
+import { PedidoItemWhereInputObjectSchema as PedidoItemWhereInputObjectSchema } from './objects/PedidoItemWhereInput.schema';
+import { PedidoItemOrderByWithAggregationInputObjectSchema as PedidoItemOrderByWithAggregationInputObjectSchema } from './objects/PedidoItemOrderByWithAggregationInput.schema';
+import { PedidoItemScalarWhereWithAggregatesInputObjectSchema as PedidoItemScalarWhereWithAggregatesInputObjectSchema } from './objects/PedidoItemScalarWhereWithAggregatesInput.schema';
+import { PedidoItemScalarFieldEnumSchema } from './enums/PedidoItemScalarFieldEnum.schema';
+import { PedidoItemCountAggregateInputObjectSchema as PedidoItemCountAggregateInputObjectSchema } from './objects/PedidoItemCountAggregateInput.schema';
+import { PedidoItemMinAggregateInputObjectSchema as PedidoItemMinAggregateInputObjectSchema } from './objects/PedidoItemMinAggregateInput.schema';
+import { PedidoItemMaxAggregateInputObjectSchema as PedidoItemMaxAggregateInputObjectSchema } from './objects/PedidoItemMaxAggregateInput.schema';
+import { PedidoItemAvgAggregateInputObjectSchema as PedidoItemAvgAggregateInputObjectSchema } from './objects/PedidoItemAvgAggregateInput.schema';
+import { PedidoItemSumAggregateInputObjectSchema as PedidoItemSumAggregateInputObjectSchema } from './objects/PedidoItemSumAggregateInput.schema';
+
+export const PedidoItemGroupBySchema: z.ZodType<Prisma.PedidoItemGroupByArgs> = z.object({ where: PedidoItemWhereInputObjectSchema.optional(), orderBy: z.union([PedidoItemOrderByWithAggregationInputObjectSchema, PedidoItemOrderByWithAggregationInputObjectSchema.array()]).optional(), having: PedidoItemScalarWhereWithAggregatesInputObjectSchema.optional(), take: z.number().optional(), skip: z.number().optional(), by: z.array(PedidoItemScalarFieldEnumSchema), _count: z.union([ z.literal(true), PedidoItemCountAggregateInputObjectSchema ]).optional(), _min: PedidoItemMinAggregateInputObjectSchema.optional(), _max: PedidoItemMaxAggregateInputObjectSchema.optional(), _avg: PedidoItemAvgAggregateInputObjectSchema.optional(), _sum: PedidoItemSumAggregateInputObjectSchema.optional() }).strict() as unknown as z.ZodType<Prisma.PedidoItemGroupByArgs>;
+
+export const PedidoItemGroupByZodSchema = z.object({ where: PedidoItemWhereInputObjectSchema.optional(), orderBy: z.union([PedidoItemOrderByWithAggregationInputObjectSchema, PedidoItemOrderByWithAggregationInputObjectSchema.array()]).optional(), having: PedidoItemScalarWhereWithAggregatesInputObjectSchema.optional(), take: z.number().optional(), skip: z.number().optional(), by: z.array(PedidoItemScalarFieldEnumSchema), _count: z.union([ z.literal(true), PedidoItemCountAggregateInputObjectSchema ]).optional(), _min: PedidoItemMinAggregateInputObjectSchema.optional(), _max: PedidoItemMaxAggregateInputObjectSchema.optional(), _avg: PedidoItemAvgAggregateInputObjectSchema.optional(), _sum: PedidoItemSumAggregateInputObjectSchema.optional() }).strict();

@@ -1,0 +1,30 @@
+import type { Prisma } from '@prisma/client';
+import * as z from 'zod';
+import { CategoriaIncludeObjectSchema as CategoriaIncludeObjectSchema } from './objects/CategoriaInclude.schema';
+import { CategoriaOrderByWithRelationInputObjectSchema as CategoriaOrderByWithRelationInputObjectSchema } from './objects/CategoriaOrderByWithRelationInput.schema';
+import { CategoriaWhereInputObjectSchema as CategoriaWhereInputObjectSchema } from './objects/CategoriaWhereInput.schema';
+import { CategoriaWhereUniqueInputObjectSchema as CategoriaWhereUniqueInputObjectSchema } from './objects/CategoriaWhereUniqueInput.schema';
+import { CategoriaScalarFieldEnumSchema } from './enums/CategoriaScalarFieldEnum.schema';
+
+// Select schema needs to be in file to prevent circular imports
+//------------------------------------------------------
+
+export const CategoriaFindFirstOrThrowSelectSchema: z.ZodType<Prisma.CategoriaSelect> = z.object({
+    id: z.boolean().optional(),
+    descripcionCategoria: z.boolean().optional(),
+    nombreCategoria: z.boolean().optional(),
+    productos: z.boolean().optional(),
+    _count: z.boolean().optional()
+  }).strict() as unknown as z.ZodType<Prisma.CategoriaSelect>;
+
+export const CategoriaFindFirstOrThrowSelectZodSchema = z.object({
+    id: z.boolean().optional(),
+    descripcionCategoria: z.boolean().optional(),
+    nombreCategoria: z.boolean().optional(),
+    productos: z.boolean().optional(),
+    _count: z.boolean().optional()
+  }).strict();
+
+export const CategoriaFindFirstOrThrowSchema: z.ZodType<Prisma.CategoriaFindFirstOrThrowArgs> = z.object({ select: CategoriaFindFirstOrThrowSelectSchema.optional(), include: z.lazy(() => CategoriaIncludeObjectSchema.optional()), orderBy: z.union([CategoriaOrderByWithRelationInputObjectSchema, CategoriaOrderByWithRelationInputObjectSchema.array()]).optional(), where: CategoriaWhereInputObjectSchema.optional(), cursor: CategoriaWhereUniqueInputObjectSchema.optional(), take: z.number().optional(), skip: z.number().optional(), distinct: z.union([CategoriaScalarFieldEnumSchema, CategoriaScalarFieldEnumSchema.array()]).optional() }).strict() as unknown as z.ZodType<Prisma.CategoriaFindFirstOrThrowArgs>;
+
+export const CategoriaFindFirstOrThrowZodSchema = z.object({ select: CategoriaFindFirstOrThrowSelectSchema.optional(), include: z.lazy(() => CategoriaIncludeObjectSchema.optional()), orderBy: z.union([CategoriaOrderByWithRelationInputObjectSchema, CategoriaOrderByWithRelationInputObjectSchema.array()]).optional(), where: CategoriaWhereInputObjectSchema.optional(), cursor: CategoriaWhereUniqueInputObjectSchema.optional(), take: z.number().optional(), skip: z.number().optional(), distinct: z.union([CategoriaScalarFieldEnumSchema, CategoriaScalarFieldEnumSchema.array()]).optional() }).strict();

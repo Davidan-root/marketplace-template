@@ -1,0 +1,14 @@
+import type { Prisma } from '@prisma/client';
+import * as z from 'zod';
+import { EstadoVendedorOrderByWithRelationInputObjectSchema as EstadoVendedorOrderByWithRelationInputObjectSchema } from './objects/EstadoVendedorOrderByWithRelationInput.schema';
+import { EstadoVendedorWhereInputObjectSchema as EstadoVendedorWhereInputObjectSchema } from './objects/EstadoVendedorWhereInput.schema';
+import { EstadoVendedorWhereUniqueInputObjectSchema as EstadoVendedorWhereUniqueInputObjectSchema } from './objects/EstadoVendedorWhereUniqueInput.schema';
+import { EstadoVendedorCountAggregateInputObjectSchema as EstadoVendedorCountAggregateInputObjectSchema } from './objects/EstadoVendedorCountAggregateInput.schema';
+import { EstadoVendedorMinAggregateInputObjectSchema as EstadoVendedorMinAggregateInputObjectSchema } from './objects/EstadoVendedorMinAggregateInput.schema';
+import { EstadoVendedorMaxAggregateInputObjectSchema as EstadoVendedorMaxAggregateInputObjectSchema } from './objects/EstadoVendedorMaxAggregateInput.schema';
+import { EstadoVendedorAvgAggregateInputObjectSchema as EstadoVendedorAvgAggregateInputObjectSchema } from './objects/EstadoVendedorAvgAggregateInput.schema';
+import { EstadoVendedorSumAggregateInputObjectSchema as EstadoVendedorSumAggregateInputObjectSchema } from './objects/EstadoVendedorSumAggregateInput.schema';
+
+export const EstadoVendedorAggregateSchema: z.ZodType<Prisma.EstadoVendedorAggregateArgs> = z.object({ orderBy: z.union([EstadoVendedorOrderByWithRelationInputObjectSchema, EstadoVendedorOrderByWithRelationInputObjectSchema.array()]).optional(), where: EstadoVendedorWhereInputObjectSchema.optional(), cursor: EstadoVendedorWhereUniqueInputObjectSchema.optional(), take: z.number().optional(), skip: z.number().optional(), _count: z.union([ z.literal(true), EstadoVendedorCountAggregateInputObjectSchema ]).optional(), _min: EstadoVendedorMinAggregateInputObjectSchema.optional(), _max: EstadoVendedorMaxAggregateInputObjectSchema.optional(), _avg: EstadoVendedorAvgAggregateInputObjectSchema.optional(), _sum: EstadoVendedorSumAggregateInputObjectSchema.optional() }).strict() as unknown as z.ZodType<Prisma.EstadoVendedorAggregateArgs>;
+
+export const EstadoVendedorAggregateZodSchema = z.object({ orderBy: z.union([EstadoVendedorOrderByWithRelationInputObjectSchema, EstadoVendedorOrderByWithRelationInputObjectSchema.array()]).optional(), where: EstadoVendedorWhereInputObjectSchema.optional(), cursor: EstadoVendedorWhereUniqueInputObjectSchema.optional(), take: z.number().optional(), skip: z.number().optional(), _count: z.union([ z.literal(true), EstadoVendedorCountAggregateInputObjectSchema ]).optional(), _min: EstadoVendedorMinAggregateInputObjectSchema.optional(), _max: EstadoVendedorMaxAggregateInputObjectSchema.optional(), _avg: EstadoVendedorAvgAggregateInputObjectSchema.optional(), _sum: EstadoVendedorSumAggregateInputObjectSchema.optional() }).strict();

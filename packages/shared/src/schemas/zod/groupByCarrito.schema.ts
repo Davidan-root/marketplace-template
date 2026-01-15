@@ -1,0 +1,15 @@
+import type { Prisma } from '@prisma/client';
+import * as z from 'zod';
+import { CarritoWhereInputObjectSchema as CarritoWhereInputObjectSchema } from './objects/CarritoWhereInput.schema';
+import { CarritoOrderByWithAggregationInputObjectSchema as CarritoOrderByWithAggregationInputObjectSchema } from './objects/CarritoOrderByWithAggregationInput.schema';
+import { CarritoScalarWhereWithAggregatesInputObjectSchema as CarritoScalarWhereWithAggregatesInputObjectSchema } from './objects/CarritoScalarWhereWithAggregatesInput.schema';
+import { CarritoScalarFieldEnumSchema } from './enums/CarritoScalarFieldEnum.schema';
+import { CarritoCountAggregateInputObjectSchema as CarritoCountAggregateInputObjectSchema } from './objects/CarritoCountAggregateInput.schema';
+import { CarritoMinAggregateInputObjectSchema as CarritoMinAggregateInputObjectSchema } from './objects/CarritoMinAggregateInput.schema';
+import { CarritoMaxAggregateInputObjectSchema as CarritoMaxAggregateInputObjectSchema } from './objects/CarritoMaxAggregateInput.schema';
+import { CarritoAvgAggregateInputObjectSchema as CarritoAvgAggregateInputObjectSchema } from './objects/CarritoAvgAggregateInput.schema';
+import { CarritoSumAggregateInputObjectSchema as CarritoSumAggregateInputObjectSchema } from './objects/CarritoSumAggregateInput.schema';
+
+export const CarritoGroupBySchema: z.ZodType<Prisma.CarritoGroupByArgs> = z.object({ where: CarritoWhereInputObjectSchema.optional(), orderBy: z.union([CarritoOrderByWithAggregationInputObjectSchema, CarritoOrderByWithAggregationInputObjectSchema.array()]).optional(), having: CarritoScalarWhereWithAggregatesInputObjectSchema.optional(), take: z.number().optional(), skip: z.number().optional(), by: z.array(CarritoScalarFieldEnumSchema), _count: z.union([ z.literal(true), CarritoCountAggregateInputObjectSchema ]).optional(), _min: CarritoMinAggregateInputObjectSchema.optional(), _max: CarritoMaxAggregateInputObjectSchema.optional(), _avg: CarritoAvgAggregateInputObjectSchema.optional(), _sum: CarritoSumAggregateInputObjectSchema.optional() }).strict() as unknown as z.ZodType<Prisma.CarritoGroupByArgs>;
+
+export const CarritoGroupByZodSchema = z.object({ where: CarritoWhereInputObjectSchema.optional(), orderBy: z.union([CarritoOrderByWithAggregationInputObjectSchema, CarritoOrderByWithAggregationInputObjectSchema.array()]).optional(), having: CarritoScalarWhereWithAggregatesInputObjectSchema.optional(), take: z.number().optional(), skip: z.number().optional(), by: z.array(CarritoScalarFieldEnumSchema), _count: z.union([ z.literal(true), CarritoCountAggregateInputObjectSchema ]).optional(), _min: CarritoMinAggregateInputObjectSchema.optional(), _max: CarritoMaxAggregateInputObjectSchema.optional(), _avg: CarritoAvgAggregateInputObjectSchema.optional(), _sum: CarritoSumAggregateInputObjectSchema.optional() }).strict();

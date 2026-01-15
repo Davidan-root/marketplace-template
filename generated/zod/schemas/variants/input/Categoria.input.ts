@@ -1,0 +1,10 @@
+import * as z from 'zod';
+// prettier-ignore
+export const CategoriaInputSchema = z.object({
+    id: z.bigint(),
+    descripcionCategoria: z.string(),
+    nombreCategoria: z.string(),
+    productos: z.array(z.unknown())
+}).strict();
+
+export type CategoriaInputType = z.infer<typeof CategoriaInputSchema>;

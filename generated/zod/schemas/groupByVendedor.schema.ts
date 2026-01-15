@@ -1,0 +1,15 @@
+import type { Prisma } from '@prisma/client';
+import * as z from 'zod';
+import { VendedorWhereInputObjectSchema as VendedorWhereInputObjectSchema } from './objects/VendedorWhereInput.schema';
+import { VendedorOrderByWithAggregationInputObjectSchema as VendedorOrderByWithAggregationInputObjectSchema } from './objects/VendedorOrderByWithAggregationInput.schema';
+import { VendedorScalarWhereWithAggregatesInputObjectSchema as VendedorScalarWhereWithAggregatesInputObjectSchema } from './objects/VendedorScalarWhereWithAggregatesInput.schema';
+import { VendedorScalarFieldEnumSchema } from './enums/VendedorScalarFieldEnum.schema';
+import { VendedorCountAggregateInputObjectSchema as VendedorCountAggregateInputObjectSchema } from './objects/VendedorCountAggregateInput.schema';
+import { VendedorMinAggregateInputObjectSchema as VendedorMinAggregateInputObjectSchema } from './objects/VendedorMinAggregateInput.schema';
+import { VendedorMaxAggregateInputObjectSchema as VendedorMaxAggregateInputObjectSchema } from './objects/VendedorMaxAggregateInput.schema';
+import { VendedorAvgAggregateInputObjectSchema as VendedorAvgAggregateInputObjectSchema } from './objects/VendedorAvgAggregateInput.schema';
+import { VendedorSumAggregateInputObjectSchema as VendedorSumAggregateInputObjectSchema } from './objects/VendedorSumAggregateInput.schema';
+
+export const VendedorGroupBySchema: z.ZodType<Prisma.VendedorGroupByArgs> = z.object({ where: VendedorWhereInputObjectSchema.optional(), orderBy: z.union([VendedorOrderByWithAggregationInputObjectSchema, VendedorOrderByWithAggregationInputObjectSchema.array()]).optional(), having: VendedorScalarWhereWithAggregatesInputObjectSchema.optional(), take: z.number().optional(), skip: z.number().optional(), by: z.array(VendedorScalarFieldEnumSchema), _count: z.union([ z.literal(true), VendedorCountAggregateInputObjectSchema ]).optional(), _min: VendedorMinAggregateInputObjectSchema.optional(), _max: VendedorMaxAggregateInputObjectSchema.optional(), _avg: VendedorAvgAggregateInputObjectSchema.optional(), _sum: VendedorSumAggregateInputObjectSchema.optional() }).strict() as unknown as z.ZodType<Prisma.VendedorGroupByArgs>;
+
+export const VendedorGroupByZodSchema = z.object({ where: VendedorWhereInputObjectSchema.optional(), orderBy: z.union([VendedorOrderByWithAggregationInputObjectSchema, VendedorOrderByWithAggregationInputObjectSchema.array()]).optional(), having: VendedorScalarWhereWithAggregatesInputObjectSchema.optional(), take: z.number().optional(), skip: z.number().optional(), by: z.array(VendedorScalarFieldEnumSchema), _count: z.union([ z.literal(true), VendedorCountAggregateInputObjectSchema ]).optional(), _min: VendedorMinAggregateInputObjectSchema.optional(), _max: VendedorMaxAggregateInputObjectSchema.optional(), _avg: VendedorAvgAggregateInputObjectSchema.optional(), _sum: VendedorSumAggregateInputObjectSchema.optional() }).strict();
