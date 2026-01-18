@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import type { Prisma } from '@prisma/client';
+import { Prisma } from '@prisma/client';
 import { VendedorUncheckedCreateNestedOneWithoutUsuarioInputObjectSchema as VendedorUncheckedCreateNestedOneWithoutUsuarioInputObjectSchema } from './VendedorUncheckedCreateNestedOneWithoutUsuarioInput.schema';
 import { CarritoUncheckedCreateNestedManyWithoutUsuarioInputObjectSchema as CarritoUncheckedCreateNestedManyWithoutUsuarioInputObjectSchema } from './CarritoUncheckedCreateNestedManyWithoutUsuarioInput.schema';
 import { PedidoUncheckedCreateNestedManyWithoutUsuarioInputObjectSchema as PedidoUncheckedCreateNestedManyWithoutUsuarioInputObjectSchema } from './PedidoUncheckedCreateNestedManyWithoutUsuarioInput.schema'
