@@ -1,4 +1,4 @@
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../prisma';
 import * as z from 'zod';
 import { PublicacionUpdateManyMutationInputObjectSchema as PublicacionUpdateManyMutationInputObjectSchema } from './objects/PublicacionUpdateManyMutationInput.schema';
 import { PublicacionWhereInputObjectSchema as PublicacionWhereInputObjectSchema } from './objects/PublicacionWhereInput.schema';

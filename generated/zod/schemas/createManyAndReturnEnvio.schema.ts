@@ -1,4 +1,4 @@
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../prisma';
 import * as z from 'zod';
 import { EnvioSelectObjectSchema as EnvioSelectObjectSchema } from './objects/EnvioSelect.schema';
 import { EnvioCreateManyInputObjectSchema as EnvioCreateManyInputObjectSchema } from './objects/EnvioCreateManyInput.schema';

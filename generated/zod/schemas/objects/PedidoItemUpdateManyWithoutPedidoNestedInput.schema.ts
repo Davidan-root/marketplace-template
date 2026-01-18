@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../../prisma';
 import { PedidoItemCreateWithoutPedidoInputObjectSchema as PedidoItemCreateWithoutPedidoInputObjectSchema } from './PedidoItemCreateWithoutPedidoInput.schema';
 import { PedidoItemUncheckedCreateWithoutPedidoInputObjectSchema as PedidoItemUncheckedCreateWithoutPedidoInputObjectSchema } from './PedidoItemUncheckedCreateWithoutPedidoInput.schema';
 import { PedidoItemCreateOrConnectWithoutPedidoInputObjectSchema as PedidoItemCreateOrConnectWithoutPedidoInputObjectSchema } from './PedidoItemCreateOrConnectWithoutPedidoInput.schema';

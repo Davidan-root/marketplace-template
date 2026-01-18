@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../../prisma';
 import { PagoSelectObjectSchema as PagoSelectObjectSchema } from './PagoSelect.schema';
 import { PagoIncludeObjectSchema as PagoIncludeObjectSchema } from './PagoInclude.schema'
 

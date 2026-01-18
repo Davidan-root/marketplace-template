@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../../prisma';
 import { PagoScalarWhereInputObjectSchema as PagoScalarWhereInputObjectSchema } from './PagoScalarWhereInput.schema';
 import { PagoUpdateManyMutationInputObjectSchema as PagoUpdateManyMutationInputObjectSchema } from './PagoUpdateManyMutationInput.schema';
 import { PagoUncheckedUpdateManyWithoutPedidoInputObjectSchema as PagoUncheckedUpdateManyWithoutPedidoInputObjectSchema } from './PagoUncheckedUpdateManyWithoutPedidoInput.schema'

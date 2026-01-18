@@ -1,4 +1,4 @@
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../prisma';
 import * as z from 'zod';
 import { PedidoUpdateManyMutationInputObjectSchema as PedidoUpdateManyMutationInputObjectSchema } from './objects/PedidoUpdateManyMutationInput.schema';
 import { PedidoWhereInputObjectSchema as PedidoWhereInputObjectSchema } from './objects/PedidoWhereInput.schema';

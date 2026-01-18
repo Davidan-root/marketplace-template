@@ -1,4 +1,4 @@
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../prisma';
 import * as z from 'zod';
 import { PagoUpdateManyMutationInputObjectSchema as PagoUpdateManyMutationInputObjectSchema } from './objects/PagoUpdateManyMutationInput.schema';
 import { PagoWhereInputObjectSchema as PagoWhereInputObjectSchema } from './objects/PagoWhereInput.schema';

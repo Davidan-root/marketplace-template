@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generatorVersion": "1.0.0",
-  "generatedAt": "2026-01-15T13:52:01.899Z",
+  "generatorVersion": "unknown",
+  "generatedAt": "2026-01-18T22:39:32.300Z",
   "outputPath": "C:\\Users\\David\\marketplace-template\\generated\\zod",
   "files": [
     "schemas\\enums\\TransactionIsolationLevel.schema.ts",

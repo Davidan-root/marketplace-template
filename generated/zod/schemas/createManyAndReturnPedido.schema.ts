@@ -1,4 +1,4 @@
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../prisma';
 import * as z from 'zod';
 import { PedidoSelectObjectSchema as PedidoSelectObjectSchema } from './objects/PedidoSelect.schema';
 import { PedidoCreateManyInputObjectSchema as PedidoCreateManyInputObjectSchema } from './objects/PedidoCreateManyInput.schema';

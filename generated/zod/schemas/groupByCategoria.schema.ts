@@ -1,4 +1,4 @@
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../prisma';
 import * as z from 'zod';
 import { CategoriaWhereInputObjectSchema as CategoriaWhereInputObjectSchema } from './objects/CategoriaWhereInput.schema';
 import { CategoriaOrderByWithAggregationInputObjectSchema as CategoriaOrderByWithAggregationInputObjectSchema } from './objects/CategoriaOrderByWithAggregationInput.schema';

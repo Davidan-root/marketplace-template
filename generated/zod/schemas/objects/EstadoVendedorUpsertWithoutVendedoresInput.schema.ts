@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../../prisma';
 import { EstadoVendedorUpdateWithoutVendedoresInputObjectSchema as EstadoVendedorUpdateWithoutVendedoresInputObjectSchema } from './EstadoVendedorUpdateWithoutVendedoresInput.schema';
 import { EstadoVendedorUncheckedUpdateWithoutVendedoresInputObjectSchema as EstadoVendedorUncheckedUpdateWithoutVendedoresInputObjectSchema } from './EstadoVendedorUncheckedUpdateWithoutVendedoresInput.schema';
 import { EstadoVendedorCreateWithoutVendedoresInputObjectSchema as EstadoVendedorCreateWithoutVendedoresInputObjectSchema } from './EstadoVendedorCreateWithoutVendedoresInput.schema';

@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../../prisma';
 import { PublicacionSelectObjectSchema as PublicacionSelectObjectSchema } from './PublicacionSelect.schema';
 import { PublicacionIncludeObjectSchema as PublicacionIncludeObjectSchema } from './PublicacionInclude.schema'
 

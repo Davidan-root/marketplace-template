@@ -1,4 +1,4 @@
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../prisma';
 import * as z from 'zod';
 import { EstadoVendedorIncludeObjectSchema as EstadoVendedorIncludeObjectSchema } from './objects/EstadoVendedorInclude.schema';
 import { EstadoVendedorOrderByWithRelationInputObjectSchema as EstadoVendedorOrderByWithRelationInputObjectSchema } from './objects/EstadoVendedorOrderByWithRelationInput.schema';

@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../../prisma';
 import { PedidoItemUncheckedCreateNestedManyWithoutPublicacionInputObjectSchema as PedidoItemUncheckedCreateNestedManyWithoutPublicacionInputObjectSchema } from './PedidoItemUncheckedCreateNestedManyWithoutPublicacionInput.schema'
 
 const makeSchema = () => z.object({

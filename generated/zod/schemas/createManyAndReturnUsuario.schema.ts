@@ -1,4 +1,4 @@
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../prisma';
 import * as z from 'zod';
 import { UsuarioSelectObjectSchema as UsuarioSelectObjectSchema } from './objects/UsuarioSelect.schema';
 import { UsuarioCreateManyInputObjectSchema as UsuarioCreateManyInputObjectSchema } from './objects/UsuarioCreateManyInput.schema';

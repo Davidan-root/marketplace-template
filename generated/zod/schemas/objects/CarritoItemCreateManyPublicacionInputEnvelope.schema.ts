@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../../prisma';
 import { CarritoItemCreateManyPublicacionInputObjectSchema as CarritoItemCreateManyPublicacionInputObjectSchema } from './CarritoItemCreateManyPublicacionInput.schema'
 
 const makeSchema = () => z.object({

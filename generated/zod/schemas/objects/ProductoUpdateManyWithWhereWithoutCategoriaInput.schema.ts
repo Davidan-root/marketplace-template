@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../../prisma';
 import { ProductoScalarWhereInputObjectSchema as ProductoScalarWhereInputObjectSchema } from './ProductoScalarWhereInput.schema';
 import { ProductoUpdateManyMutationInputObjectSchema as ProductoUpdateManyMutationInputObjectSchema } from './ProductoUpdateManyMutationInput.schema';
 import { ProductoUncheckedUpdateManyWithoutCategoriaInputObjectSchema as ProductoUncheckedUpdateManyWithoutCategoriaInputObjectSchema } from './ProductoUncheckedUpdateManyWithoutCategoriaInput.schema'

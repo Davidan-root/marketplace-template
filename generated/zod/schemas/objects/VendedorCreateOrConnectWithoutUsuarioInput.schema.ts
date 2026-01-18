@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../../prisma';
 import { VendedorWhereUniqueInputObjectSchema as VendedorWhereUniqueInputObjectSchema } from './VendedorWhereUniqueInput.schema';
 import { VendedorCreateWithoutUsuarioInputObjectSchema as VendedorCreateWithoutUsuarioInputObjectSchema } from './VendedorCreateWithoutUsuarioInput.schema';
 import { VendedorUncheckedCreateWithoutUsuarioInputObjectSchema as VendedorUncheckedCreateWithoutUsuarioInputObjectSchema } from './VendedorUncheckedCreateWithoutUsuarioInput.schema'

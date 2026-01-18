@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../../prisma';
 import { CategoriaSelectObjectSchema as CategoriaSelectObjectSchema } from './CategoriaSelect.schema';
 import { CategoriaIncludeObjectSchema as CategoriaIncludeObjectSchema } from './CategoriaInclude.schema'
 

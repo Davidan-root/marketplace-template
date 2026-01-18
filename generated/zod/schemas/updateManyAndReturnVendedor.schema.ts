@@ -1,4 +1,4 @@
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../prisma';
 import * as z from 'zod';
 import { VendedorSelectObjectSchema as VendedorSelectObjectSchema } from './objects/VendedorSelect.schema';
 import { VendedorUpdateManyMutationInputObjectSchema as VendedorUpdateManyMutationInputObjectSchema } from './objects/VendedorUpdateManyMutationInput.schema';

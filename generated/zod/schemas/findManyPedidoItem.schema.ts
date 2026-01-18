@@ -1,4 +1,4 @@
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../prisma';
 import * as z from 'zod';
 import { PedidoItemIncludeObjectSchema as PedidoItemIncludeObjectSchema } from './objects/PedidoItemInclude.schema';
 import { PedidoItemOrderByWithRelationInputObjectSchema as PedidoItemOrderByWithRelationInputObjectSchema } from './objects/PedidoItemOrderByWithRelationInput.schema';

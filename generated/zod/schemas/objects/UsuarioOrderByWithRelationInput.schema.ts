@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../../prisma';
 import { SortOrderSchema } from '../enums/SortOrder.schema';
 import { EstadoUsuarioOrderByWithRelationInputObjectSchema as EstadoUsuarioOrderByWithRelationInputObjectSchema } from './EstadoUsuarioOrderByWithRelationInput.schema';
 import { VendedorOrderByWithRelationInputObjectSchema as VendedorOrderByWithRelationInputObjectSchema } from './VendedorOrderByWithRelationInput.schema';

@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../../prisma';
 import { UsuarioCreateNestedOneWithoutCarritosInputObjectSchema as UsuarioCreateNestedOneWithoutCarritosInputObjectSchema } from './UsuarioCreateNestedOneWithoutCarritosInput.schema';
 import { CarritoItemCreateNestedManyWithoutCarritoInputObjectSchema as CarritoItemCreateNestedManyWithoutCarritoInputObjectSchema } from './CarritoItemCreateNestedManyWithoutCarritoInput.schema'
 

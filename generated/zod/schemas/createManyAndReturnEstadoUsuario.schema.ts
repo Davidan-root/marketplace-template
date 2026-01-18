@@ -1,4 +1,4 @@
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../prisma';
 import * as z from 'zod';
 import { EstadoUsuarioSelectObjectSchema as EstadoUsuarioSelectObjectSchema } from './objects/EstadoUsuarioSelect.schema';
 import { EstadoUsuarioCreateManyInputObjectSchema as EstadoUsuarioCreateManyInputObjectSchema } from './objects/EstadoUsuarioCreateManyInput.schema';

@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../../prisma';
 import { ResenaScalarWhereInputObjectSchema as ResenaScalarWhereInputObjectSchema } from './ResenaScalarWhereInput.schema';
 import { ResenaUpdateManyMutationInputObjectSchema as ResenaUpdateManyMutationInputObjectSchema } from './ResenaUpdateManyMutationInput.schema';
 import { ResenaUncheckedUpdateManyWithoutProductoInputObjectSchema as ResenaUncheckedUpdateManyWithoutProductoInputObjectSchema } from './ResenaUncheckedUpdateManyWithoutProductoInput.schema'

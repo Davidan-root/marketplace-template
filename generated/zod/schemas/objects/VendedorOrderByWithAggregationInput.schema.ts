@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../../prisma';
 import { SortOrderSchema } from '../enums/SortOrder.schema';
 import { VendedorCountOrderByAggregateInputObjectSchema as VendedorCountOrderByAggregateInputObjectSchema } from './VendedorCountOrderByAggregateInput.schema';
 import { VendedorAvgOrderByAggregateInputObjectSchema as VendedorAvgOrderByAggregateInputObjectSchema } from './VendedorAvgOrderByAggregateInput.schema';

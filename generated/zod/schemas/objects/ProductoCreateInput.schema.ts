@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../../prisma';
 import { CategoriaCreateNestedOneWithoutProductosInputObjectSchema as CategoriaCreateNestedOneWithoutProductosInputObjectSchema } from './CategoriaCreateNestedOneWithoutProductosInput.schema';
 import { PublicacionCreateNestedManyWithoutProductoInputObjectSchema as PublicacionCreateNestedManyWithoutProductoInputObjectSchema } from './PublicacionCreateNestedManyWithoutProductoInput.schema';
 import { ResenaCreateNestedManyWithoutProductoInputObjectSchema as ResenaCreateNestedManyWithoutProductoInputObjectSchema } from './ResenaCreateNestedManyWithoutProductoInput.schema'

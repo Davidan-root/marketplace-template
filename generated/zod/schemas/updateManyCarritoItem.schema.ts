@@ -1,4 +1,4 @@
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../prisma';
 import * as z from 'zod';
 import { CarritoItemUpdateManyMutationInputObjectSchema as CarritoItemUpdateManyMutationInputObjectSchema } from './objects/CarritoItemUpdateManyMutationInput.schema';
 import { CarritoItemWhereInputObjectSchema as CarritoItemWhereInputObjectSchema } from './objects/CarritoItemWhereInput.schema';

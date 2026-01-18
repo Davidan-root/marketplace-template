@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../../prisma';
 import { CarritoItemCreateWithoutCarritoInputObjectSchema as CarritoItemCreateWithoutCarritoInputObjectSchema } from './CarritoItemCreateWithoutCarritoInput.schema';
 import { CarritoItemUncheckedCreateWithoutCarritoInputObjectSchema as CarritoItemUncheckedCreateWithoutCarritoInputObjectSchema } from './CarritoItemUncheckedCreateWithoutCarritoInput.schema';
 import { CarritoItemCreateOrConnectWithoutCarritoInputObjectSchema as CarritoItemCreateOrConnectWithoutCarritoInputObjectSchema } from './CarritoItemCreateOrConnectWithoutCarritoInput.schema';

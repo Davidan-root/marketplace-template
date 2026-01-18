@@ -1,4 +1,4 @@
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../prisma';
 import * as z from 'zod';
 import { CarritoWhereInputObjectSchema as CarritoWhereInputObjectSchema } from './objects/CarritoWhereInput.schema';
 import { CarritoOrderByWithAggregationInputObjectSchema as CarritoOrderByWithAggregationInputObjectSchema } from './objects/CarritoOrderByWithAggregationInput.schema';

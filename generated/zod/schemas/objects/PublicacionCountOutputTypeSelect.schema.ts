@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../../prisma';
 import { PublicacionCountOutputTypeCountCarritoItemsArgsObjectSchema as PublicacionCountOutputTypeCountCarritoItemsArgsObjectSchema } from './PublicacionCountOutputTypeCountCarritoItemsArgs.schema';
 import { PublicacionCountOutputTypeCountPedidoItemsArgsObjectSchema as PublicacionCountOutputTypeCountPedidoItemsArgsObjectSchema } from './PublicacionCountOutputTypeCountPedidoItemsArgs.schema'
 

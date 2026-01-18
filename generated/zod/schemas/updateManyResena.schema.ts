@@ -1,4 +1,4 @@
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../prisma';
 import * as z from 'zod';
 import { ResenaUpdateManyMutationInputObjectSchema as ResenaUpdateManyMutationInputObjectSchema } from './objects/ResenaUpdateManyMutationInput.schema';
 import { ResenaWhereInputObjectSchema as ResenaWhereInputObjectSchema } from './objects/ResenaWhereInput.schema';

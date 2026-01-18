@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../../prisma';
 import { CategoriaWhereInputObjectSchema as CategoriaWhereInputObjectSchema } from './CategoriaWhereInput.schema';
 import { CategoriaUpdateWithoutProductosInputObjectSchema as CategoriaUpdateWithoutProductosInputObjectSchema } from './CategoriaUpdateWithoutProductosInput.schema';
 import { CategoriaUncheckedUpdateWithoutProductosInputObjectSchema as CategoriaUncheckedUpdateWithoutProductosInputObjectSchema } from './CategoriaUncheckedUpdateWithoutProductosInput.schema'

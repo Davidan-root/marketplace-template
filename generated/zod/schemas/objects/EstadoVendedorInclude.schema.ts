@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../../prisma';
 import { VendedorFindManySchema as VendedorFindManySchema } from '../findManyVendedor.schema';
 import { EstadoVendedorCountOutputTypeArgsObjectSchema as EstadoVendedorCountOutputTypeArgsObjectSchema } from './EstadoVendedorCountOutputTypeArgs.schema'
 

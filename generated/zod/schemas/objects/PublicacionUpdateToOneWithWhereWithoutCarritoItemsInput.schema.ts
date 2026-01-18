@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../../prisma';
 import { PublicacionWhereInputObjectSchema as PublicacionWhereInputObjectSchema } from './PublicacionWhereInput.schema';
 import { PublicacionUpdateWithoutCarritoItemsInputObjectSchema as PublicacionUpdateWithoutCarritoItemsInputObjectSchema } from './PublicacionUpdateWithoutCarritoItemsInput.schema';
 import { PublicacionUncheckedUpdateWithoutCarritoItemsInputObjectSchema as PublicacionUncheckedUpdateWithoutCarritoItemsInputObjectSchema } from './PublicacionUncheckedUpdateWithoutCarritoItemsInput.schema'

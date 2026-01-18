@@ -1,4 +1,4 @@
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../prisma';
 import * as z from 'zod';
 import { EnvioUpdateManyMutationInputObjectSchema as EnvioUpdateManyMutationInputObjectSchema } from './objects/EnvioUpdateManyMutationInput.schema';
 import { EnvioWhereInputObjectSchema as EnvioWhereInputObjectSchema } from './objects/EnvioWhereInput.schema';

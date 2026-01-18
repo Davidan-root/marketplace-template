@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../../prisma';
 import { EstadoVendedorSelectObjectSchema as EstadoVendedorSelectObjectSchema } from './EstadoVendedorSelect.schema';
 import { EstadoVendedorIncludeObjectSchema as EstadoVendedorIncludeObjectSchema } from './EstadoVendedorInclude.schema'
 

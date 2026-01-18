@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../../prisma';
 import { CategoriaCreateWithoutProductosInputObjectSchema as CategoriaCreateWithoutProductosInputObjectSchema } from './CategoriaCreateWithoutProductosInput.schema';
 import { CategoriaUncheckedCreateWithoutProductosInputObjectSchema as CategoriaUncheckedCreateWithoutProductosInputObjectSchema } from './CategoriaUncheckedCreateWithoutProductosInput.schema';
 import { CategoriaCreateOrConnectWithoutProductosInputObjectSchema as CategoriaCreateOrConnectWithoutProductosInputObjectSchema } from './CategoriaCreateOrConnectWithoutProductosInput.schema';

@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../../prisma';
 import { EnvioWhereInputObjectSchema as EnvioWhereInputObjectSchema } from './EnvioWhereInput.schema';
 import { EnvioUpdateWithoutPedidoInputObjectSchema as EnvioUpdateWithoutPedidoInputObjectSchema } from './EnvioUpdateWithoutPedidoInput.schema';
 import { EnvioUncheckedUpdateWithoutPedidoInputObjectSchema as EnvioUncheckedUpdateWithoutPedidoInputObjectSchema } from './EnvioUncheckedUpdateWithoutPedidoInput.schema'

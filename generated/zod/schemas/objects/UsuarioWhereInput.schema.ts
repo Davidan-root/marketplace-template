@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../../prisma';
 import { BigIntFilterObjectSchema as BigIntFilterObjectSchema } from './BigIntFilter.schema';
 import { StringFilterObjectSchema as StringFilterObjectSchema } from './StringFilter.schema';
 import { EstadoUsuarioScalarRelationFilterObjectSchema as EstadoUsuarioScalarRelationFilterObjectSchema } from './EstadoUsuarioScalarRelationFilter.schema';

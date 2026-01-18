@@ -1,4 +1,4 @@
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../prisma';
 import * as z from 'zod';
 import { EnvioWhereInputObjectSchema as EnvioWhereInputObjectSchema } from './objects/EnvioWhereInput.schema';
 import { EnvioOrderByWithAggregationInputObjectSchema as EnvioOrderByWithAggregationInputObjectSchema } from './objects/EnvioOrderByWithAggregationInput.schema';

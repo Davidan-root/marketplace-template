@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../../prisma';
 import { PedidoItemUncheckedCreateNestedManyWithoutPedidoInputObjectSchema as PedidoItemUncheckedCreateNestedManyWithoutPedidoInputObjectSchema } from './PedidoItemUncheckedCreateNestedManyWithoutPedidoInput.schema';
 import { EnvioUncheckedCreateNestedOneWithoutPedidoInputObjectSchema as EnvioUncheckedCreateNestedOneWithoutPedidoInputObjectSchema } from './EnvioUncheckedCreateNestedOneWithoutPedidoInput.schema'
 

@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../../prisma';
 import { ResenaSelectObjectSchema as ResenaSelectObjectSchema } from './ResenaSelect.schema';
 import { ResenaIncludeObjectSchema as ResenaIncludeObjectSchema } from './ResenaInclude.schema'
 

@@ -1,4 +1,4 @@
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../prisma';
 import * as z from 'zod';
 import { PublicacionIncludeObjectSchema as PublicacionIncludeObjectSchema } from './objects/PublicacionInclude.schema';
 import { PublicacionOrderByWithRelationInputObjectSchema as PublicacionOrderByWithRelationInputObjectSchema } from './objects/PublicacionOrderByWithRelationInput.schema';

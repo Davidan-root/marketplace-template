@@ -1,4 +1,4 @@
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../prisma';
 import * as z from 'zod';
 import { ResenaOrderByWithRelationInputObjectSchema as ResenaOrderByWithRelationInputObjectSchema } from './objects/ResenaOrderByWithRelationInput.schema';
 import { ResenaWhereInputObjectSchema as ResenaWhereInputObjectSchema } from './objects/ResenaWhereInput.schema';

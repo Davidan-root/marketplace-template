@@ -1,4 +1,4 @@
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../prisma';
 import * as z from 'zod';
 import { PagoWhereInputObjectSchema as PagoWhereInputObjectSchema } from './objects/PagoWhereInput.schema';
 import { PagoOrderByWithAggregationInputObjectSchema as PagoOrderByWithAggregationInputObjectSchema } from './objects/PagoOrderByWithAggregationInput.schema';

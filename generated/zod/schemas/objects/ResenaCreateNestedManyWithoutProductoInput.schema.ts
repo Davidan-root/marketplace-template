@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../../prisma';
 import { ResenaCreateWithoutProductoInputObjectSchema as ResenaCreateWithoutProductoInputObjectSchema } from './ResenaCreateWithoutProductoInput.schema';
 import { ResenaUncheckedCreateWithoutProductoInputObjectSchema as ResenaUncheckedCreateWithoutProductoInputObjectSchema } from './ResenaUncheckedCreateWithoutProductoInput.schema';
 import { ResenaCreateOrConnectWithoutProductoInputObjectSchema as ResenaCreateOrConnectWithoutProductoInputObjectSchema } from './ResenaCreateOrConnectWithoutProductoInput.schema';

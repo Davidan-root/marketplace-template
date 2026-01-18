@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import type { Prisma } from '@prisma/client';
+import type { Prisma } from '../../../prisma';
 import { EstadoUsuarioCreateNestedOneWithoutUsuariosInputObjectSchema as EstadoUsuarioCreateNestedOneWithoutUsuariosInputObjectSchema } from './EstadoUsuarioCreateNestedOneWithoutUsuariosInput.schema';
 import { VendedorCreateNestedOneWithoutUsuarioInputObjectSchema as VendedorCreateNestedOneWithoutUsuarioInputObjectSchema } from './VendedorCreateNestedOneWithoutUsuarioInput.schema';
 import { PedidoCreateNestedManyWithoutUsuarioInputObjectSchema as PedidoCreateNestedManyWithoutUsuarioInputObjectSchema } from './PedidoCreateNestedManyWithoutUsuarioInput.schema'
