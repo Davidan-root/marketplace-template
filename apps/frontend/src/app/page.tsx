@@ -1,6 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { UsuarioUncheckedCreateInputObjectSchema } from '../../../../generated/zod/schemas/objects/UsuarioUncheckedCreateInput.schema';
+import { UsuarioUncheckedCreateInputObjectSchema } from '../../../generated/zod/schemas/objects/UsuarioUncheckedCreateInput.schema';
 
 export default function Home() {
   const { register, handleSubmit, formState: { errors } } = useForm({
