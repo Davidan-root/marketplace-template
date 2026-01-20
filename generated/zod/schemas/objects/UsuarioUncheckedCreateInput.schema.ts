@@ -1,3 +1,4 @@
+
 import * as z from 'zod';
 import type { Prisma } from '../../../prisma';
 import { VendedorUncheckedCreateNestedOneWithoutUsuarioInputObjectSchema as VendedorUncheckedCreateNestedOneWithoutUsuarioInputObjectSchema } from './VendedorUncheckedCreateNestedOneWithoutUsuarioInput.schema';
